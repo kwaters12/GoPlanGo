@@ -1,5 +1,5 @@
 @import 'bootstrap';
-html { background-color: #3c5956;}
+html, body { background-color: #3c5956;}
 html, body {
   height: 100%;
 }
@@ -13,7 +13,7 @@ img.logo {
   }
 .post-thumb {max-width: 200px;}
 body {
-  background-image: url('../images/van_bg.jpg');
+  background-image: image-url('../images/van_bg.jpg');
   background-position:center;
   background-size: 1631px 720px;
 }
