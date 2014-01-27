@@ -6,7 +6,7 @@
     </div>
     <h3><%= shop.name %></h3>
     <br>   
-    
+
     <%= shop.body %>
     <p>Address: <%= shop.address %></p>
     <br>
@@ -16,7 +16,7 @@
 <% end %>
 <br>
 <%= link_to "All Cities", cities_path, class: "btn btn-danger" %>
-
+<hr>
 <%= form_for [@city, @business] do |f| %>
   <div class="form-group">
     <p><%= f.label :name, "Shop name:" %>
@@ -30,8 +30,14 @@
     <p><%= f.label :address, "Enter Shop Address:" %>
     <br>
     <%= f.text_field :address, class: "form-control" %></p>
-
+    <div class="form-group">
+      <%= f.label :activity %>
+      <%= f.select :activity_id, Activity.all.collect { |c| [c.name, c.id]}, class: "form-control" %>  
+    </div>
   
   </div>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
+<br><br>
+<br><br>
+<br><br>

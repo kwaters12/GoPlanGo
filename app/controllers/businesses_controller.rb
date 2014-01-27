@@ -13,7 +13,7 @@ class BusinessesController < ApplicationController
   end
 
   def comment_attributes
-    params.require(:business).permit(:name, :address, :link, :email, :body)
+    params.require(:business).permit(:name, :address, :link, :email, :body, :activity_id)
   end
 
   def destroy

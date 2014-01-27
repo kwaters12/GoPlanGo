@@ -1,4 +1,6 @@
 Goplango2::Application.routes.draw do
+  resources :activities
+
   resources :cities do
     resources :businesses
   end
