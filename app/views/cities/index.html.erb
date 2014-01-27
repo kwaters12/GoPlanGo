@@ -1,17 +1,12 @@
-<h1>City</h1>
-<%= link_to "New City", new_city_path, class: "btn btn-primary" %>
-<br><br>
+<img class="logo" src="/logo.png">
 
-<% @cities.each do |city| %>        
-      <div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
-          
-      <% @cities.each do |city| %>
-         <h2><%= link_to "#{city.name}", city %></h2>
-          <%= link_to "Delete City", city, method: :delete, data: { confirm: "Are you sure?"} %>
-          <%= link_to "Edit City", edit_city_path(city) %>
-      <% end %>
-      </div>  
-      <div class="clearfix"></div>         
-    
-    
+<div class="cities">
+<% @cities.each do |city| %>
+  <h2><%= link_to "#{city.name}", city %></h2>
+  <%= link_to "Delete City", city, method: :delete, data: { confirm: "Are you sure?"} %>
+  <%= link_to "Edit City", edit_city_path(city) %>
+
 <% end %>
+</div>
+<hr>
+<%= link_to "New City", new_city_path, class: "btn btn-primary" %>

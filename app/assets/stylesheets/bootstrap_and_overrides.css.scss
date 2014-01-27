@@ -1,1 +1,29 @@
 @import 'bootstrap';
+html { background-color: #3c5956;}
+html, body {
+  height: 100%;
+}
+img.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 70%;
+    min-width: 320px;
+  }
+.post-thumb {max-width: 200px;}
+body {
+  background-image: url('../images/van_bg.jpg');
+  background-position:center;
+  background-size: 1631px 720px;
+}
+h1, h2 {color: white;}
+a {color: white;}
+p {color: white;}
+a:hover {color: #cef4f9; text-decoration: none;}
+.navbar-default {
+background-color: #407d85;
+border-color: #113c42;
+opacity: 0.6;
+}
+.cities {text-align: center;}
