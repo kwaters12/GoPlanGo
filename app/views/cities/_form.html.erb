@@ -1,0 +1,21 @@
+<% Rails.logger.info @city.inspect %>
+<%= form_for @city do |f| %>
+  <% if @city.errors.any? %>
+    <ul class="alert_message">
+      <% @city.errors.messages.values.each do |message| %>
+      
+      <li><%= message.join "," %></li>
+      <% end %>
+    </ul>
+
+  <% end %>
+  <div class="form-group">
+    <%= f.label :name, "City Name: " %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+  <%= link_to "Back", cities_path, class: "btn btn-primary" %>
+  
+
+<% end %>
