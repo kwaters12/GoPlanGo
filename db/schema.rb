@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140127084156) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "activities", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -31,8 +34,8 @@ ActiveRecord::Schema.define(version: 20140127084156) do
     t.integer  "activity_id"
   end
 
-  add_index "businesses", ["activity_id"], name: "index_businesses_on_activity_id"
-  add_index "businesses", ["city_id"], name: "index_businesses_on_city_id"
+  add_index "businesses", ["activity_id"], name: "index_businesses_on_activity_id", using: :btree
+  add_index "businesses", ["city_id"], name: "index_businesses_on_city_id", using: :btree
 
   create_table "cities", force: true do |t|
     t.string   "name"

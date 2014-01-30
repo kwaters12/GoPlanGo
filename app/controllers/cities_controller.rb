@@ -8,16 +8,20 @@ class CitiesController < ApplicationController
   def new
     @city = City.new
   end
+
   def create
     city = City.new(city_params)
     city.save
     redirect_to cities_path
   end
+
   def show
     @business = Business.new
   end
+
   def edit
   end
+
   def update
     if @city.update_attributes(city_params)
       redirect_to @city, notice: "City updated successfully"
@@ -32,6 +36,10 @@ class CitiesController < ApplicationController
     else
       redirect_to cities_path, alert: "Problem deleting city"
     end
+  end
+
+  def calendar
+    @current_time = Time.now
   end
 
   private

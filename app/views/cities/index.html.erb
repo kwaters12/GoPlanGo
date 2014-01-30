@@ -1,4 +1,4 @@
-<img class="logo" src="/logo.png">
+<img class="logo" src="http://goplango.com.s3.amazonaws.com/logo.png">
 
 <div class="cities">
 <% @cities.each do |city| %>
@@ -7,6 +7,11 @@
   <%= link_to "Edit City", edit_city_path(city) %>
 
 <% end %>
+
 </div>
+<%= @current_time %>
 <hr>
 <%= link_to "New City", new_city_path, class: "btn btn-primary" %>
+<br><br>
+<br><br>
+<br><br>

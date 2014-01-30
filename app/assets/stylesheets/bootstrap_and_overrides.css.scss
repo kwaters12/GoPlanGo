@@ -13,8 +13,9 @@ img.logo {
   }
 .post-thumb {max-width: 200px;}
 body {
-  background-image: image-url('../images/van_bg.jpg');
-  background-position:center;
+  background-image: image-url(asset-path('http://goplango.com.s3.amazonaws.com/van_bg.jpg'));
+  background-repeat: no-repeat;
+  background-position:center top;
   background-size: 1631px 720px;
 }
 h1, h2 {color: white;}
