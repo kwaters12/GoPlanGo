@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby "2.1.0"
 
 gem 'bootstrap-sass'
 gem 'rails_12factor', group: :production
